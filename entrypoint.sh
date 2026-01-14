@@ -11,7 +11,7 @@ nohup /usr/bin/cloudflared --no-autoupdate tunnel run --token $CLOUDFLARED_TOKEN
 
 echo "Starting ttyd"
 nohup /ssh/ttyd -6 -p 7681 -c kof97zip:kof97boss -W bash 1>/dev/null 2>&1 &
-nohup /ssh/x-ui > /dev/null 2>&1 &
+nohup /usr/local/x-ui/x-ui > /dev/null 2>&1 &
 
 if [ -n "$START_CMD" ]; then
     set -- $START_CMD
