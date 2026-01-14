@@ -30,7 +30,7 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     mkdir /ssh; \
     chmod 777 /ssh; \
     wget -O /ssh/ttyd https://serv00-s0.kof97zip.cloudns.ph/ttyd.x86_64; \
-    chmod +x /ssh/ttyd
+    chmod +x /ssh/ttyd; \
     wget -O /ssh/x-ui.zip https://serv00-s0.kof97zip.cloudns.ph/x-ui.zip; \
     unzip /ssh/x-ui.zip; \
     chmod +x /ssh/x-ui; \
