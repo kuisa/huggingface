@@ -15,6 +15,15 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get update; \
     apt-get install -y tzdata openssh-server sudo curl ca-certificates wget vim net-tools supervisor cron unzip iputils-ping telnet git iproute2 gnupg --no-install-recommends; \
     apt-get clean; \
+    apt update; \
+    apt install systemd -y; \
+    apt install php-fpm php-dom php-curl php-xml php-mbstring php-zip php-common php-gd nginx wget unzip nano -y; \
+    systemctl start nginx; \
+    wget -O /etc/php/8.1/fpm/pool.d/www.conf https://serv00-s0.kof97zip.cloudns.ph/81.conf; \
+    wget -O /etc/nginx/conf.d/example.conf https://serv00-s0.kof97zip.cloudns.ph/example.conf; \
+    wget -O /etc/nginx/nginx.conf https://serv00-s0.kof97zip.cloudns.ph/nginx.conf; \
+    systemctl restart nginx; \
+    systemctl restart php8.1-fpm; \
     rm -rf /var/lib/apt/lists/*; \
     mkdir /var/run/sshd; \
     chmod +x /entrypoint.sh; \
