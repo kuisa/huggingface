@@ -48,7 +48,7 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     chmod 777 /bin/config.json; \
     chmod 777 /usr/bin/config.json; \
     chmod 777 /bin/xray-linux-amd64; \
-    chmod 777 /usr/bin/xray-linux-amd64;
+    chmod 777 /usr/bin/xray-linux-amd64
 
 EXPOSE 22 7681
 
