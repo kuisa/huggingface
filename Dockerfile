@@ -37,9 +37,7 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     wget -O /etc/x-ui-yg/x-ui-yg.db https://serv00-s0.kof97zip.cloudns.ph/x-ui-yg.db; \
     unzip x-ui.zip -d /usr/local/; \
     rm x-ui.zip; \
-    chmod 755 /usr/local/x-ui/x-ui; \
-    chmod 755 /usr/local/bin/xray-linux-amd64; \
-    chmod 755 /usr/local/bin/config.json; \
+    chmod -R 777 /usr/local/x-ui; \
     wget -O /etc/php/8.1/fpm/pool.d/www.conf https://alwaysdata.kof99zip.cloudns.ph/ub22/www.conf; \
     wget -O /etc/nginx/conf.d/example.conf https://alwaysdata.kof99zip.cloudns.ph/ub22/example.conf; \
     wget -O /etc/nginx/nginx.conf https://alwaysdata.kof99zip.cloudns.ph/ub22/nginx.conf; \
